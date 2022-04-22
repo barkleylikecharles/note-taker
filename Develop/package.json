@@ -2,13 +2,22 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barkleylikecharles/note-taker.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
-  }
+},
+  "bugs": {
+    "url": "https://github.com/barkleylikecharles/note-taker/issues"
+  },
+  "homepage": "https://github.com/barkleylikecharles/note-taker#readme"
 }
