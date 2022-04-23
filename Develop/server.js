@@ -6,7 +6,7 @@ const path = require('path');
 const express = require('express');
 // const { saveDatabase } = require('./db/db');
 //Set Port
-const PORT = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3000;
 //Express App
 const app = express();
 
