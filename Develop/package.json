@@ -2,7 +2,7 @@
   "name": "note-taker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -14,9 +14,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
-    "uuid": "^8.3.2"
-  },
+    "express": "^4.16.4"
+},
   "bugs": {
     "url": "https://github.com/barkleylikecharles/note-taker/issues"
   },

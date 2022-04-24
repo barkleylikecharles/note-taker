@@ -1,4 +1,7 @@
-# note-taker
+# Note Taker
+
+## Description
+Write and save notes to keep yourself organized.  Perfect for small business owners that want to organize their thoughts and keep track of tasks on their to do list.
 
 ## License
 MIT License

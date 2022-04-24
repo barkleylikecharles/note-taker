@@ -1,8 +1,8 @@
+// Bring in routes files
 const apiRoutes = require('./routes/apiRoutes');
 const htmlRoutes = require('./routes/htmlRoutes');
 
-// const fs = require('fs');
-// const path = require('path');
+//Express
 const express = require('express');
 // const { saveDatabase } = require('./db/db');
 //Set Port
