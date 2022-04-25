@@ -4,6 +4,7 @@ const router = require('express').Router();
 const fs = require('fs');
 const saveDatabase = require('../db/db.json');
 const { append } = require('express/lib/response');
+const { randomFillSync } = require('crypto');
 // const saveDatabase = JSON.parse(db);
 
 
@@ -24,7 +25,7 @@ router.post('/notes' , (req, res) => {
         };
         saveDatabase.push(newJSON);
         console.log(saveDatabase);
-        console.log(id)
+        console.log(newJSON)
 
 // Write to db file
 fs.writeFile('db/db.json', JSON.stringify(saveDatabase), function(err) {
@@ -36,7 +37,31 @@ fs.writeFile('db/db.json', JSON.stringify(saveDatabase), function(err) {
     });
 
 // Delete button
-app.delete('/api/notes/:id', (req, res) => {
-}
+// router.delete('notes/:id', (req, res) => {
+//     let id = req.params.id;
+
+//     fs.readFile("./db/db.json", JSON.stringify(saveDatabase), function(err, data) {
+//         if (err) throw err;
+
+//         let jsonData = JSON.parse(data);
+// // Loop to look for unique id to delete
+// for (let i=0; i<jsonData.length; i++) {
+//     if (id== jsonData[i].id) {
+//         jsonData.splice(i,1);
+//         fs.writeFile("./db/db.json", JSON.stringify(jsonData), function(err) {
+//             if (err) throw err;
+//             console.log("Your note was deleted");
+//         });
+// };
+// };
+//     });
+// });
+
+
+
+    // };
+    // const findNote = findById(req.params.id, saveDatabase);
+// app.delete('/api/notes/:id', (req, res) => {
+// }
 // Export router
 module.exports = router;
