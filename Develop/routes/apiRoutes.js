@@ -3,6 +3,7 @@ const { v4: uuidv4 }= require('uuid')
 const router = require('express').Router();
 const fs = require('fs');
 const saveDatabase = require('../db/db.json');
+const { append } = require('express/lib/response');
 // const saveDatabase = JSON.parse(db);
 
 
@@ -35,6 +36,7 @@ fs.writeFile('db/db.json', JSON.stringify(saveDatabase), function(err) {
     });
 
 // Delete button
-
+app.delete('/api/notes/:id', (req, res) => {
+}
 // Export router
 module.exports = router;
