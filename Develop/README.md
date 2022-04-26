@@ -7,16 +7,18 @@ Write and save notes to keep yourself organized.  Perfect for small business own
 Node JS https://nodejs.org/en/
 
 ## Installation
-Clone the repository to your local development environmnet.
+Clone the repository to your local development environment.
+
+https://github.com/barkleylikecharles/note-taker
 
 Run npm install to install all dependencies. 
 
 ## Usage
-To use the app locally, run the following command:
+To use the app locally, run the following command in your CLI:
 
 node server.js 
 
-in your CLI, and then open http://localhost:3000 in your browser. The note take app is also live on Heroku.
+Then open http://localhost:3000 in your browser. The note take app is also live on Heroku.
 
 <iframe src="https://drive.google.com/file/d/1nr9y2pKVYOV8Y1UVjkp-Csu2V_Xxaftx/preview" width="640" height="480"></iframe>
 
