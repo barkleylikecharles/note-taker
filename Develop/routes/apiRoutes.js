@@ -71,9 +71,4 @@ router.delete('/notes/:id', (req, res) => {
 
 
 
-// };
-// const findNote = findById(req.params.id, saveDatabase);
-// app.delete('/api/notes/:id', (req, res) => {
-// }
-// Export router
 module.exports = router;
