@@ -3,6 +3,22 @@
 ## Description
 Write and save notes to keep yourself organized.  Perfect for small business owners that want to organize their thoughts and keep track of tasks on their to do list.
 
+## Installation
+npm init
+
+## Usage
+Run the following command using inquirer at the root of your project and answer the prompted questions:
+
+node index.js
+
+<iframe src="https://drive.google.com/file/d/1nr9y2pKVYOV8Y1UVjkp-Csu2V_Xxaftx/preview" width="640" height="480"></iframe>
+
+## Credits
+Project Completed by Nicole Barkley. [GitHub Profile] (https://github.com/barkleylikecharles)
+
+## Tutorial
+Screencastify Video Link https://youtu.be/_CDfDvbkmMI
+
 ## License
 MIT License
 
