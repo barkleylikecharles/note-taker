@@ -10,38 +10,41 @@ const { randomFillSync } = require('crypto');
 
 // GET request
 router.get('/notes', (req, res) => {
-    fs.readFile('db/db.json', "utf-8", function(err, data) {
+    fs.readFile('db/db.json', "utf-8", function (err, data) {
         let newData = JSON.parse(data);
 
-    res.json(newData);
+        res.json(newData);
     })
 });
 // POST request
 router.post('/notes', (req, res) => {
-    // fs.readFile('db/db.json')
-    const newTitle = req.body.title;
-    const newText = req.body.text;
-    // console.log(newTitle);
-    if (!newTitle || !newText) {
-        res.status(400).json({ msg: 'Please enter both a title and text description to complete.' })
-    } else {
-        const newJSON = {
-            id: uuidv4(),
-            title: newTitle,
-            text: newText
-        };
-        saveDatabase.push(newJSON);
-        console.log(saveDatabase);
-        console.log(newJSON)
+    fs.readFile('db/db.json', "utf-8", function (err, data) {
+        let newData = JSON.parse(data);
 
-        // Write to db file
-        fs.writeFile('db/db.json', JSON.stringify(saveDatabase), function (err) {
-            if (err) throw err;
-            console.log("Saved to the database");
-        })
-        res.json(saveDatabase);
-    };
-});
+        const newTitle = req.body.title;
+        const newText = req.body.text;
+        // console.log(newTitle);
+        if (!newTitle || !newText) {
+            res.status(400).json({ msg: 'Please enter both a title and text description to complete.' })
+        } else {
+            const newJSON = {
+                id: uuidv4(),
+                title: newTitle,
+                text: newText
+            };
+            newData.push(newJSON);
+            console.log(newData);
+            console.log(newJSON)
+
+            // Write to db file
+            fs.writeFile('db/db.json', JSON.stringify(newData), function (err) {
+                if (err) throw err;
+                console.log("Saved to the database");
+                res.json(newData);
+            })
+        };
+    });
+})
 
 // Delete button
 router.delete('/notes/:id', (req, res) => {
@@ -59,6 +62,7 @@ router.delete('/notes/:id', (req, res) => {
                 fs.writeFile("./db/db.json", JSON.stringify(jsonData), function (err) {
                     if (err) throw err;
                     console.log("Your note was deleted");
+                    res.json(jsonData);
                 });
             };
         };
