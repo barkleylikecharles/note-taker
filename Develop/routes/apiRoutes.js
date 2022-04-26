@@ -33,8 +33,8 @@ router.post('/notes', (req, res) => {
                 text: newText
             };
             newData.push(newJSON);
-            console.log(newData);
-            console.log(newJSON)
+            // console.log(newData);
+            // console.log(newJSON)
 
             // Write to db file
             fs.writeFile('db/db.json', JSON.stringify(newData), function (err) {
@@ -49,7 +49,7 @@ router.post('/notes', (req, res) => {
 // Delete button
 router.delete('/notes/:id', (req, res) => {
     let id = req.params.id;
-    console.log(id)
+    // console.log(id)
     fs.readFile("./db/db.json", "utf-8", function (err, data) {
         if (err) throw err;
 
@@ -58,7 +58,7 @@ router.delete('/notes/:id', (req, res) => {
         for (let i = 0; i < jsonData.length; i++) {
             if (id == jsonData[i].id) {
                 jsonData.splice(i, 1);
-                console.log(jsonData);
+                // console.log(jsonData);
                 fs.writeFile("./db/db.json", JSON.stringify(jsonData), function (err) {
                     if (err) throw err;
                     console.log("Your note was deleted");

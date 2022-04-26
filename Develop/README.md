@@ -20,7 +20,7 @@ node server.js
 
 Then open http://localhost:3000 in your browser. The note take app is also live on Heroku.
 
-<iframe src="https://drive.google.com/file/d/1nr9y2pKVYOV8Y1UVjkp-Csu2V_Xxaftx/preview" width="640" height="480"></iframe>
+![image](https://user-images.githubusercontent.com/97490354/165217563-2e329e6a-7d9d-4b31-8b82-a407851af20a.png)
 
 ## Credits
 Project Completed by Nicole Barkley. [GitHub Profile] (https://github.com/barkleylikecharles)
