@@ -18,9 +18,7 @@ To use the app locally, run the following command in your CLI:
 
 node server.js 
 
-Then open http://localhost:3000 in your browser. The note take app is also live on Heroku.
-
-![image](https://user-images.githubusercontent.com/97490354/165217563-2e329e6a-7d9d-4b31-8b82-a407851af20a.png)
+The note take app is also live on Heroku.
 
 ## Credits
 Project Completed by Nicole Barkley. [GitHub Profile] (https://github.com/barkleylikecharles)
